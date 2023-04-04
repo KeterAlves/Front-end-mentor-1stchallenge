@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      html{
+        font-family: "Hanken Grotesk", sans-serif;
+      }
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 770px;
+        flex-flow:wrap;
+      }
+        #box1{
+        background: linear-gradient(0deg, hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%));
+        text-align: center;
+        width: 250px;
+        border-radius: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+      }
+
+      #just{
+        width: 200px;
+      }
+
+      #box2{
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10%;
+        padding: 20px;
+        gap: 15px;
+      }
+
+      #circle{
+        border-radius: 50%;
+        background: linear-gradient(0deg, hsla(241, 72%, 46%, 0) 0%, hsla(256, 72%, 46%, 1));
+        width: 120px;
+      }
+
+      button{
+        background-color: hsl(224, 30%, 27%);
+        border: none;
+        color: white;
+        border-radius: 25px;
+        padding: 15px;
+        margin-top: 20px;
+        font-weight: 700;
+      }
+      button:hover{
+        background: linear-gradient(0deg, hsl(241, 81%, 54%) 0%, hsl(252, 100%, 67%));
+        border: none;
+        color: white;
+        border-radius: 25px;
+        padding: 15px;
+        margin-top: 20px;
+        font-weight: 700;
+      }
+      #start{
+        color: hsl(224, 30%, 27%);
+        text-align: left;
+      }
+
+      .linha{
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+        background-color: hsl(0, 100%, 95%);
+        color: hsl(0, 100%, 67%);;
+      }
+      .linha2{
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+        background-color: hsl(38, 100%, 94%);
+        color:hsl(39, 100%, 56%);
+      }
+      .linha3{
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+        background-color: hsl(166, 100%, 94%);
+        color:hsl(166, 100%, 37%)
+      }
+      .linha4{
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+        background-color:hsl(235, 100%, 94%);
+        color: hsl(234, 85%, 45%);
+      }
+      #p1{
+        color: hsl(0, 100%, 67%);
+      }
+      #p2{
+        color:hsl(39, 100%, 56%);
+      }
+      #p3{
+        color:hsl(166, 100%, 37%);
+      }
+      #p4{
+        color: hsl(234, 85%, 45%);
+      }
+      p, h1, h2, h3{
+        color: white;
+      }
+      
+      @media screen and (max-width:500px){
+        .container{flex-direction: column;}
+        #box1{width: 100%;}
+      }
+  
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div id="box1">
+        <h3>Your Result</h3>
+          <div id="circle">
+            <h1>76</h1>
+            <p>of 100</p>
+          </div> 
+        <h2>Great</h2>
+        <P id="just"> You scored higher than 65% of the people who have taken these tests.</P>
+      </div>
+
+      
+      <div id="box2">
+        <h3 id="start">Summary</h3>
+        <div class="linha">
+          <div class="icone"> <img src="./assets/images/icon-reaction.svg" alt="">
+            Reaction
+          </div>
+        <p id="p1">  <b>80 </b>/ 100</p>
+        </div> 
+        <div class="linha2">
+          <div class="icone"> <img src="./assets/images/icon-memory.svg" alt="">
+            Reaction
+          </div>
+        <p id="p2">  <b>92 </b>/ 100</p>
+        </div> 
+        <div class="linha3">
+          <div class="icone"> <img src="./assets/images/icon-verbal.svg" alt="">
+            Reaction
+          </div>
+        <p id="p3">  <b>61 </b>/ 100</p>
+        </div> 
+        <div class="linha4">
+          <div class="icone"> <img src="./assets/images/icon-visual.svg" alt="">
+            Reaction
+          </div>
+        <p id="p4">  <b>72 </b>/ 100</p>
+        </div> 
+
+        <button id="btnC">Continue</button>
+      </div>
+
+    </div>
+    <br/>
+   
+  </body>
+</html>
